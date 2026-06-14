@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VocaHub - 보컬로이드 음악 플랫폼</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">V</div>
+      <div>
+        <h1>VocaHub</h1>
+        <p>보컬로이드 음악 플랫폼</p>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#songs">곡</a>
+      <a href="#playlists">플레이리스트</a>
+      <a href="#producers">프로듀서</a>
+      <a href="#comments">댓글</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">VOCALOID COMMUNITY</p>
+        <h2>곡을 찾고, 듣고, 저장하고, 공유하는 공간</h2>
+        <p class="lead">
+          보컬로이드 음악을 더 쉽게 즐길 수 있도록 만든 감성형 음악 플랫폼입니다.
+          곡 검색, 추천, 플레이리스트, 댓글 기능을 한 화면에 담았습니다.
+        </p>
+
+        <div class="search-bar">
+          <input id="searchInput" type="text" placeholder="곡 제목, 프로듀서, 태그 검색" />
+          <button id="searchBtn">검색</button>
+        </div>
+
+        <div class="hero-buttons">
+          <button id="resetBtn" class="btn-outline">전체 보기</button>
+          <button class="btn-primary">로그인 / 회원가입</button>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <h3>오늘의 추천</h3>
+        <div class="now-playing">
+          <div class="cover cover-a"></div>
+          <div>
+            <strong>하늘색 멜로디</strong>
+            <p>K-Producer · ballad</p>
+          </div>
+        </div>
+        <div class="now-playing">
+          <div class="cover cover-b"></div>
+          <div>
+            <strong>별빛 리듬</strong>
+            <p>MikuLab · electronic</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <h3>곡</h3>
+        <p>128</p>
+      </div>
+      <div class="stat">
+        <h3>프로듀서</h3>
+        <p>42</p>
+      </div>
+      <div class="stat">
+        <h3>플레이리스트</h3>
+        <p>76</p>
+      </div>
+      <div class="stat">
+        <h3>댓글</h3>
+        <p>1,204</p>
+      </div>
+    </section>
+
+    <section id="songs" class="section">
+      <div class="section-head">
+        <h2>곡 목록</h2>
+        <p>검색하면 곡 카드가 실시간으로 바뀝니다.</p>
+      </div>
+      <div id="songGrid" class="grid"></div>
+    </section>
+
+    <section id="playlists" class="section two-col">
+      <article class="panel">
+        <h2>플레이리스트</h2>
+        <ul class="simple-list">
+          <li>새벽 감성 플레이리스트</li>
+          <li>공부할 때 듣는 곡</li>
+          <li>신나는 전자음악 모음</li>
+          <li>눈물 나는 발라드</li>
+        </ul>
+      </article>
+
+      <article class="panel">
+        <h2>추천 시스템</h2>
+        <p>청취 기록을 기반으로 비슷한 분위기의 곡을 추천하는 영역입니다.</p>
+
+        <div class="meter">
+          <span>감성곡</span>
+          <div><i style="width: 78%"></i></div>
+        </div>
+        <div class="meter">
+          <span>댄스곡</span>
+          <div><i style="width: 54%"></i></div>
+        </div>
+        <div class="meter">
+          <span>잔잔한 곡</span>
+          <div><i style="width: 89%"></i></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="producers" class="section">
+      <div class="section-head">
+        <h2>프로듀서 페이지</h2>
+        <p>대표곡과 업로드 수를 보여주는 카드형 영역입니다.</p>
+      </div>
+
+      <div class="producer-grid">
+        <article class="producer-card">
+          <h3>K-Producer</h3>
+          <p>대표곡: 하늘색 멜로디</p>
+          <p>업로드: 24곡</p>
+          <button>팔로우</button>
+        </article>
+
+        <article class="producer-card">
+          <h3>MikuLab</h3>
+          <p>대표곡: 별빛 리듬</p>
+          <p>업로드: 18곡</p>
+          <button>팔로우</button>
+        </article>
+
+        <article class="producer-card">
+          <h3>SynthWave</h3>
+          <p>대표곡: 비 오는 밤</p>
+          <p>업로드: 31곡</p>
+          <button>팔로우</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="comments" class="section two-col">
+      <article class="panel">
+        <h2>댓글</h2>
+        <div id="commentList" class="comment-list">
+          <p><strong>리얼리스트</strong> · 이 곡 분위기 너무 좋다!</p>
+          <p><strong>하늘팬</strong> · 가사 해석도 궁금해요.</p>
+          <p><strong>보컬덕후</strong> · 다음 신곡도 기대 중!</p>
+        </div>
+      </article>
+
+      <article class="panel">
+        <h2>댓글 작성</h2>
+        <textarea id="commentInput" placeholder="댓글을 입력하세요"></textarea>
+        <button id="commentBtn" class="btn-primary">등록</button>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>VocaHub · 보컬로이드 음악을 더 쉽게 즐기는 공간</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
